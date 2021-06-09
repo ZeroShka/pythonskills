@@ -1,0 +1,22 @@
+<html>
+  <head>
+
+  </head>
+  <form method="post">
+  <body>
+    Страна:
+  <br>
+  <select name="country_list">
+    {% for n in country %}
+        <option selected value={{ n }}>{{ n }}</option>
+        {% endfor %}
+</select>
+  <input type="submit" name="btn" value="Отправить"/>
+  <br>
+    {% if request.method == "POST" %}
+    БЫЛ МЕТОД ПОСТ
+    {% endif %}
+  {{ a }}
+  </body>
+</form>
+</html>
